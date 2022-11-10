@@ -1,8 +1,11 @@
 import React from 'react'
+import Soal1 from './test/Soal1'
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+        <Soal1/>
+    </>
   )
 }
 
