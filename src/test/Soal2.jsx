@@ -4,11 +4,18 @@ import React from 'react'
 //const sentence = "Saya sangat senang mengerjakan soal algoritma"
 // mengerjakan: 11 character
 
-
+const sentence = "Saya sangat senang mengerjakan soal algoritma"
+//menyortir kata terpanjang
+    const strArray = sentence.split(' ');
+    const sortedStrArray = strArray.sort(
+        (strA, strB) => {
+            return strB.length - strA.length;
+        }
+    )
 
 const Soal2 = () => {
   return (
-    <div>Soal2</div>
+    <div>{sortedStrArray}</div>
   )
 }
 
