@@ -6,7 +6,7 @@ const replace = string.replace("NEGIE", "EIGEN");
 const Soal1 = () => {
   return (
     <div>
-        {replace}
+        <h1>{replace}</h1>
     </div>
   )
 }
