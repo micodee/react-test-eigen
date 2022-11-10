@@ -17,9 +17,11 @@ const longestWord = (sentence) => {
     return sortedStrArray[0]
 }
 
+const count = longestWord(sentence).split('').length
+
 const Soal2 = () => {
   return (
-    <div>{longestWord(sentence)}</div>
+    <div>{longestWord(sentence)}: {count} character</div>
   )
 }
 
