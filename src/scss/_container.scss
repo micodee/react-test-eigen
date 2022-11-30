@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 768px;
+    background: rgba(0, 0, 0, 0.093);
+    margin: auto;
+    padding: 2rem 0;
+
+    .content {
+        width: 700px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+
+        .output {
+            justify-self: start;
+        }
+
+        input {
+            padding: .3rem;
+            width: 20rem;
+            border: 2px solid deepskyblue;
+            border-radius: 10px;
+            justify-self: end;
+        }
+        
+    }
+}

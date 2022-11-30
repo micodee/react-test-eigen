@@ -35,8 +35,14 @@ const output3 = dz;
 
 const Soal3 = () => {
   return (
-    <div>
-      <h2>[{`${output1.length},${output2.length},${output3.length}`}]</h2>
+    <div className="container">
+      <div className="content">
+        <div className="output">
+          <h2>[{`${output1.length},${output2.length},${output3.length}`}]</h2>
+          <h2>query : {query.join(",")}</h2>
+        </div>
+        <input type="text" placeholder={input} />
+      </div>
     </div>
   );
 };
