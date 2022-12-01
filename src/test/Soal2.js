@@ -6,16 +6,16 @@ import React, {useState} from "react";
 
 const sentence = "Saya sangat senang mengerjakan soal algoritma";
 
-const longestWord = (sentence) => {
+const longestWord = (obj) => {
   //menyortir kata terpanjang
-  const strArray = sentence.split(" ");
-  const sortedStrArray = strArray.sort((strA, strB) => {
-    return strB.length - strA.length;
+  const strArray = obj.split(" ");
+  const sortedStrArray = strArray.sort((A, B) => {
+    return B.length - A.length;
   });
   return sortedStrArray[0];
 };
 
-const count = longestWord(sentence).split("").length;
+// const count = longestWord(sentence).split("").length;
 
 const Soal2 = () => {
   const [name, setCount] = useState(sentence);
@@ -23,7 +23,7 @@ const Soal2 = () => {
     <div className="container">
       <div className="content">
         <div className="output">
-          <h2>{longestWord(sentence)}: {count} character.</h2>
+          <h2>{longestWord(name)}: {longestWord(name).split("").length} character.</h2>
         </div>
           <input type="text" placeholder={sentence} onChange={(obj) => setCount(obj.target.value)} />
       </div>
