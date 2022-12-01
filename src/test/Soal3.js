@@ -8,7 +8,14 @@ const query = ["bbb", "ac", "dz"];
 //karena kata 'bbb' terdapat 1 pada INPUT, kata 'ac' tidak ada pada INPUT,
 //dan kata 'dz' terdapat 2 pada INPUT
 
-// const output = input.join(',').match(/[a-z]/g)
+//cara 1
+const countWords = query.map((w) => {
+  return input.reduce((x,y) => {
+    return w === y ?++x :x;
+  }, 0)
+})
+
+//cara 2
 const bbb = input.filter((obj) => query[0].indexOf(obj) !== -1);
 const ac = input.filter((obj) => query[1].indexOf(obj) !== -1);
 const dz = input.filter((obj) => query[2].indexOf(obj) !== -1);
@@ -38,6 +45,7 @@ const Soal3 = () => {
     <div className="container">
       <div className="content">
         <div className="output">
+        <h2>{countWords}</h2>
           <h2>[{`${output1.length},${output2.length},${output3.length}`}]</h2>
           <h2>query : {query.join(",")}</h2>
         </div>
