@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 //Diberikan contoh sebuah kalimat, silahkan cari kata terpanjang dari kalimat tersebut, jika ada kata dengan panjang yang sama silahkan ambil salah satu
 //const sentence = "Saya sangat senang mengerjakan soal algoritma"
@@ -18,13 +18,14 @@ const longestWord = (sentence) => {
 const count = longestWord(sentence).split("").length;
 
 const Soal2 = () => {
+  const [name, setCount] = useState(sentence);
   return (
     <div className="container">
       <div className="content">
         <div className="output">
           <h2>{longestWord(sentence)}: {count} character.</h2>
         </div>
-          <input type="text" placeholder={sentence} />
+          <input type="text" placeholder={sentence} onChange={(obj) => setCount(obj.target.value)} />
       </div>
     </div>
   );
