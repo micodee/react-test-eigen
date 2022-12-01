@@ -9,11 +9,11 @@ const query = ["bbb", "ac", "dz"];
 //dan kata 'dz' terdapat 2 pada INPUT
 
 //cara 1
-const countWords = query.map((w) => {
-  return input.reduce((x,y) => {
+const countWords = query.map((w) => input.reduce((x,y) => {
     return w === y ?++x :x;
   }, 0)
-})
+)
+console.log(query.map)
 
 //cara 2
 const bbb = input.filter((obj) => query[0].indexOf(obj) !== -1);

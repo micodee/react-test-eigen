@@ -5,22 +5,19 @@ import React, { useState } from "react";
 //cara 1 replace
 const string = "NEGIE1";
 const replace = string.replace("NEGIE", "EIGEN");
-//cara 2 reverse
-const array = string.split("").reverse().join("").slice(1);
-const reverse = array + "1";
 
 const Soal1 = () => {
-  const [name, setName] = useState(reverse);
+  const [reverse, setInput] = useState(string);
 
   function setChange(obj) {
-    setName(obj.target.value);
+    setInput(obj.target.value);
   }
   return (
     <div className="container">
       <div className="content">
         <div className="output">
           <h2>{replace} - is replace</h2>
-          <h2>{name} - is reverse</h2>
+          <h2>{reverse.split("").reverse().join("")+1} - is reverse</h2>
         </div>
         <input
           type="text"
